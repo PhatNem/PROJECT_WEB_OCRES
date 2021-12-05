@@ -1,0 +1,5 @@
+db/.env
+spotify/python-spotipy/.env
+spotify/python-spotipy/.cache
+spotify/connection-test.sh
+**/node_modules

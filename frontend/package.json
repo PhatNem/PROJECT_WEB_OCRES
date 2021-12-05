@@ -2,10 +2,30 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3005",
   "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.2",
+    "@types/maplibre-gl": "1.13.0",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "echarts": "^5.2.2",
+    "echarts-for-react": "^3.0.2",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "maplibre-gl": "^1.15.2",
+    "mongoose": "^6.0.14",
+    "npm": "^8.1.4",
+    "react": "^16.14.0",
+    "react-bootstrap": "^2.0.3",
+    "react-dom": "^16.14.0",
+    "react-router": "^6.0.0-beta.8",
+    "react-router-bootstrap": "^0.26.0",
+    "react-router-dom": "^6.0.0-beta.8",
+    "react-scripts": "^4.0.3",
+    "superagent": "^6.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,6 +42,7 @@
     "production": [
       ">0.2%",
       "not dead",
+      "not ie <= 11",
       "not op_mini all"
     ],
     "development": [
@@ -31,9 +52,12 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-actions": "^6.4.4",
     "@storybook/addon-links": "^5.2.6",
     "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6"
+    "@storybook/react": "^6.4.4"
+  },
+  "optionalDependencies": {
+    "babel-loader": "8.1.0"
   }
 }

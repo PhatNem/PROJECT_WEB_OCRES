@@ -1,0 +1,9 @@
+.getchart {
+  width: 40%;
+  height: fit-content;
+  padding: 1em;
+  margin: 1em;
+  background-color: #34614e;
+  color: rgb(255, 255, 255);
+  vertical-align: center;
+}

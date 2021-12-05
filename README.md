@@ -1,23 +1,62 @@
-# Projet de fin de semestre
+SpotiGraph - spotify data-viz
+==========================================
 
-A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
+* 23 Nov. 2021 - Gis-Druide - initial commit
+* 28 Nov. 2021 - React Component: fetch and display data from third party api 
+* 29 Nov. 2021 - React Component: Line Chart with apache echarts.js
+* 30 Nov. 2021 - React Component: Map with maplibre.js
+* 02 Dec. 2021 - React Router v6 implement (navbar, switch pages)
+* 03 Dec. 2021 - Simple Map Layer from local geojson file
 
-<p align="center">
- <a href="https://gitlab.com/Adrien_Kourganoff/instructions_web_ocres_ing4/-/blob/master/README.md">Règles pour le semestre</a>
-</p>
+## Road map
 
-## Introduction
+* full-stack compact project using NodeJS, React, Mongo
+* retrieve data from third parties API like [spotify](https://developer.spotify.com/documentation/web-api/)
+* dashboard fency display using [echarts.js](https://echarts.apache.org/en/index.html) or [grafana](https://grafana.com/) or similar
+* embed charts into React reusable widgets
+* mongo-db is required, even if not necessary
+* responsive html output
 
-Ce repo git contient deux repertoires. L'un concerne la partie backend et l'autre la partie frontend.
+## Set up
 
-Les deux repertoires ont été initialisé pour vous aider à démarrer le projet dans les meilleures conditions.
+#### docker network
 
-Chacun de ces repertoires contient un README.md qui vous pouvez vous approprier. Nous vous encourageons à le faire en y mettant toute les informations nécessaires à la compréhension de votre projet
+docker network for testing purposes (move to docker-compose later)
 
-## Instructions
+```sh
+docker network create spotigraph-net
+```
 
-Les instructions sont à retrouver dans le pdf instruction.pdf.
+#### mongo
 
-**Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
+run database with [Mongo](./db/README.md)
 
-Pour rappel, la probabilité de recevoir une réponse à un mail envoyé quelques heures avant le rendu est très proche de 0.
+
+
+## Tests 
+
+### Python - spotiPy lib : Spotify data -> mongoDB
+
+
+* OK pull spotify-data(Artists)
+* OK load data to mongo
+
+### React tests
+
+* /src/components (component.js, component.css)
+* Getweather: json data from [openweathermap.org/data](https://api.openweathermap.org/data/2.5/forecast/daily?q=Sonsonate&units=metric&appid=4081444b7b90198136fefe6ed4ccf35b)
+* Getadress: json data from [api-adresse.data.gouv.fr/search](https://api-adresse.data.gouv.fr/search/?q=ornano%2075018%20paris)
+* Maplibre.js
+* react-dom-router
+* dependencies issues
+
+
+## docs
+
+* [how-to Node-Docker](https://practicalprogramming.fr/docker-node-api)
+* [REST in React](https://pusher.com/tutorials/consume-restful-api-react/)
+* [Restful react component](https://medium.com/@nutanbhogendrasharma/step-by-step-consume-rest-api-in-react-application-48388f6c4d9c)
+* [simple React component design](https://www.digitalocean.com/community/tutorials/how-to-create-custom-components-in-react-fr)
+* [do not git node_modules](https://gist.github.com/lmcneel/45594e550a3403d589bdcaad38138a83)
+* [how-to React-echarts.js](https://medium.com/@mailjontay/make-a-dynamic-chart-with-react-and-echarts-a-simple-tutorial-92a5c3c053a2)
+* [react Router doc](https://reactrouter.com/docs/en/v6/upgrading/v5)

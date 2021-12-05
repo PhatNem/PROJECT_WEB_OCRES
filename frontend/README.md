@@ -1,13 +1,41 @@
-# Frontend
+tests
+========================================
 
-Ce dossier contiendra la partie frontend de votre projet.
+### Nodejs for ubuntu
 
-Le frontend à été initalisé avec un create-react-app et sotrybook y est deja installé avec un exemple de stories que vous trouverez dans le repertoire `src/stories`.
+* apt latest package is 10.19
+* node 17 throws an error with openssl 3
+* downgrade to node 16
 
-Storybook est là pour vous aider à prototyper et documenter vos composants. Si nous n'arrivons pas à lancer votre projet, nous pourrons au moins regarder vos composants en fonctionnement.
+```sh
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+npm -v
+node -v
+```
 
-## Documentation
+### dependencies
 
-Vous pourrez supprimer le contenu de ce README et vous l'approprier en y notant les éléments importants de votre projet. Il est très important de bien documenter un projet !
+* ! react-dom v5 vs. v6 is uneasy
 
-Inspirez-vous des grands repos open sources qui existent sur github. Les informations qui reviennent souvent sont une description du projet (pourquoi, comment...), la maniere de lancer le projet et eventuellement d'y contribuer, une documentation sur des éléments que vous voulez mettre en avant et pour finir les noms des contributeurs.
+```sh
+npm install -g npm
+npm install react react-dom --save
+npm install react-router-dom --save
+npm install --save echarts-for-react
+npm install --save echarts
+npm install maplibre-gl
+npm install react-bootstrap
+npm install react-router-bootstrap
+```
+
+### possible errors 
+
+* dependency error react-scripts depends on babel 8.1.0 while latest is 8.2.3 -> edit package.json
+
+```json
+  "optionalDependencies": {
+    "babel-loader": "8.1.0"
+  }
+```
+
